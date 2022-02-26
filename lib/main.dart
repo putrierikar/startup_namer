@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           //child: Text('Hello World'),
-          child: Text(wordPair.asPascalCase),
+          //child: Text(wordPair.asPascalCase),
+          child: RandomWords(),
         ),
       ),
     );
@@ -52,6 +53,6 @@ class _RandomWordsState extends State<RandomWords> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     final wordPair = WordPair.random();
-    return Container();
+    return Text(wordPair.asPascalCase);
   }
 }
